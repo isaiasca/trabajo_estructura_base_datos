@@ -50,7 +50,7 @@ CREATE TABLE `empleados` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `emp_nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `emp_apellido` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `emp_edad` int NOT NULL,
+  `emp_fecha_nacimiento` int NOT NULL,
   `emp_oficio` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `emp_fecha_alta` date NOT NULL,
   `emp_salario` int NOT NULL,
@@ -106,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-01 21:46:47
+-- Dump completed on 2022-12-01 22:54:04
