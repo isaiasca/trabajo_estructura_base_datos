@@ -1,0 +1,22 @@
+-- Ejercicio 1:
+-- Usamos la base de datos trabajo_salud
+USE trabajo_salud;
+-- Primero llamamos a delimiter
+DELIMITER $$
+-- CREATE un procedimiento almacenados que se llama insert_department
+CREATE PROCEDURE insert_department(IN new_department VARCHAR(25))
+BEGIN
+-- Utilizamos INSERT INTO  para insertar un nuevo departamento
+INSERT INTO departamentos(nom_departamento)
+VALUES
+(new_department);
+-- Llamamos end para finalizar
+END $$
+
+-- Ejecutamos call
+CALL trabajo_salud.insert_department('Farmacia');
+
+-- Usamos la base de datos trabajo_salud
+USE trabajo_salud;
+-- Utilizamos SELECT para mostrar el dato ingresado
+SELECT * FROM departamentos;
