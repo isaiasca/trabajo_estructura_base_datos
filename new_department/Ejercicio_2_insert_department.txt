@@ -1,4 +1,4 @@
--- Ejercicio 1:
+-- Ejercicio 2:
 -- Usamos la base de datos trabajo_salud
 USE trabajo_salud;
 -- Primero llamamos a delimiter
