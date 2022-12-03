@@ -1,0 +1,17 @@
+-- Ejercicio 4:
+
+-- Usamos la base de datos trabajo_salud
+USE trabajo_salud;
+-- Primero llamamos a delimiter
+DELIMITER $$
+-- Create un procedimiento almacenado que se llama return_information
+CREATE PROCEDURE return_information(IN id_emp INTEGER)
+BEGIN
+-- Utilizamos SELECT para mostrar los datos
+SELECT emp_apellido, emp_oficio, emp_salario 
+FROM empleados WHERE id LIKE id_emp;
+-- Llamamos end para finalizar
+END $$
+
+-- Ejecutamos call
+CALL trabajo_salud.return_information(1);
