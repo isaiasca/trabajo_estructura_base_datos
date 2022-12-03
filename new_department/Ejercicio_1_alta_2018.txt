@@ -1,0 +1,9 @@
+-- Ejercicio 1:
+
+-- Usamos la base de datos trabajo_salud
+USE trabajo_salud;
+-- Utilizamos SELECT para mostrar datos
+SELECT empleados.id, empleados.emp_nombre, empleados.emp_fecha_alta, departamentos.nom_departamento 
+FROM empleados
+INNER JOIN departamentos ON empleados.nro_departamento = departamentos.nro_departamento
+WHERE empleados.emp_fecha_alta BETWEEN '1980-01-01' AND '2018-01-01';
