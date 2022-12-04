@@ -1,0 +1,22 @@
+-- Ejercicio 5:
+
+-- Usamos la base de datos trabajo_salud
+USE trabajo_salud;
+-- Primero llamamos a delimiter
+DELIMITER $$
+-- Create un procedimiento almacenado que se llama drop_out
+CREATE PROCEDURE drop_out(IN apellido VARCHAR(25))
+BEGIN
+SET @buscar = 0;
+SELECT DISTINCT id INTO @buscar FROM empleados WHERE  emp_apellido = apellido;
+UPDATE empleados SET emp_dar_baja = 'Dar de baja' WHERE id = @buscar;
+-- Llamamos end para finalizar
+END $$
+
+-- Ejecutamos call
+CALL trabajo_salud.drop_out('Emard');
+
+-- Profesor el codigo esta bien pero va a salir
+-- error por que en mi base de datos hay datos 
+-- duplicados estoy buscando una manera de como
+-- elimiar esos datos duplicados por asi decir ya encontre mi error
